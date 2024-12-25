@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "chore_jobs.app"
-               BlueprintName = "chore_jobs"
-               ReferencedContainer = "container:chore_jobs.xcodeproj">
+               BuildableName = "kin_keeper.app"
+               BlueprintName = "kin_keeper"
+               ReferencedContainer = "container:kin_keeper.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "chore_jobsTests.xctest"
-               BlueprintName = "chore_jobsTests"
-               ReferencedContainer = "container:chore_jobs.xcodeproj">
+               BuildableName = "kin_keeperTests.xctest"
+               BlueprintName = "kin_keeperTests"
+               ReferencedContainer = "container:kin_keeper.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "chore_jobs.app"
-            BlueprintName = "chore_jobs"
-            ReferencedContainer = "container:chore_jobs.xcodeproj">
+            BuildableName = "kin_keeper.app"
+            BlueprintName = "kin_keeper"
+            ReferencedContainer = "container:kin_keeper.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "chore_jobs.app"
-            BlueprintName = "chore_jobs"
-            ReferencedContainer = "container:chore_jobs.xcodeproj">
+            BuildableName = "kin_keeper.app"
+            BlueprintName = "kin_keeper"
+            ReferencedContainer = "container:kin_keeper.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

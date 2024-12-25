@@ -1,7 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { AppState, Group, Job } from '../types';
 
-const STORAGE_KEY = 'CHORE_JOBS_APP_STATE';
+const STORAGE_KEY = 'kin_keeper_APP_STATE';
 
 export const getInitialState = (): AppState => ({
   groups: [],

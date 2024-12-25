@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface chore_jobsTests : XCTestCase
+@interface kin_keeperTests : XCTestCase
 
 @end
 
-@implementation chore_jobsTests
+@implementation kin_keeperTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL (^)(UIView *view))test
 {
