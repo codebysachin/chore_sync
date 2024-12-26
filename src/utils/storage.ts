@@ -37,6 +37,15 @@ export const updateGroup = async (group: Group): Promise<void> => {
   const state = await loadState();
   const index = state.groups.findIndex(g => g.id === group.id);
   if (index !== -1) {
+    const currentGroup = state.groups[index];
+    const currentAdminCount = currentGroup.members.filter(m => m.role === 'admin').length;
+    const newAdminCount = group.members.filter(m => m.role === 'admin').length;
+
+    // Prevent demoting the last admin
+    if (currentAdminCount === 1 && newAdminCount === 0) {
+      return;
+    }
+
     state.groups[index] = group;
     await saveState(state);
   }

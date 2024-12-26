@@ -117,7 +117,12 @@ export const CreateJobScreen = ({ route, navigation }: Props) => {
         ...state,
         jobs: [...state.jobs, newJob],
       });
-      navigation.goBack();
+      if (route.params.groupId) {
+        navigation.navigate('GroupDetails', {
+          groupId: route.params.groupId,
+          refresh: true
+        });
+      }
     } catch (error) {
       Alert.alert('Error', 'Failed to create job');
     }

@@ -15,6 +15,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/types';
 import { loadState, saveState } from '../utils/storage';
 import { Group, Member } from '../types';
+import { getTestProps } from '../utils/testUtils';
 
 type CreateGroupScreenNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
@@ -42,7 +43,7 @@ export const CreateGroupScreen = () => {
       id: generateId(),
       name: memberName.trim(),
       email: memberEmail.trim(),
-      role: members.length === 0 ? 'admin' : 'regular',
+      role: members.length === 0 ? 'admin' : 'member',
       availability: {
         monday: [],
         tuesday: [],
@@ -52,7 +53,7 @@ export const CreateGroupScreen = () => {
         saturday: [],
         sunday: [],
       },
-      preferences: {},
+      jobPreferences: {},
     };
 
     setMembers([...members, newMember]);
@@ -81,7 +82,8 @@ export const CreateGroupScreen = () => {
         id: generateId(),
         name: groupName.trim(),
         members,
-        jobs: [],
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
       };
 
       await saveState({
@@ -111,6 +113,7 @@ export const CreateGroupScreen = () => {
             placeholderTextColor="#999"
             value={groupName}
             onChangeText={setGroupName}
+            {...getTestProps('group-name-input')}
           />
         </View>
 
@@ -123,6 +126,7 @@ export const CreateGroupScreen = () => {
               placeholderTextColor="#999"
               value={memberName}
               onChangeText={setMemberName}
+              {...getTestProps('member-name-input')}
             />
             <TextInput
               style={[styles.input, styles.memberInput]}
@@ -132,8 +136,13 @@ export const CreateGroupScreen = () => {
               onChangeText={setMemberEmail}
               keyboardType="email-address"
               autoCapitalize="none"
+              {...getTestProps('member-email-input')}
             />
-            <TouchableOpacity style={styles.addButton} onPress={addMember}>
+            <TouchableOpacity 
+              style={styles.addButton} 
+              onPress={addMember}
+              {...getTestProps('add-member-submit')}
+            >
               <Text style={styles.addButtonText}>Add</Text>
             </TouchableOpacity>
           </View>
@@ -164,6 +173,7 @@ export const CreateGroupScreen = () => {
                 <TouchableOpacity
                   style={styles.removeButton}
                   onPress={() => removeMember(member.id)}
+                  {...getTestProps(`remove-member-${member.id}`)}
                 >
                   <Text style={styles.removeButtonText}>-</Text>
                 </TouchableOpacity>
@@ -173,7 +183,11 @@ export const CreateGroupScreen = () => {
         )}
       </ScrollView>
 
-      <TouchableOpacity style={styles.createButton} onPress={createGroup}>
+      <TouchableOpacity 
+        style={styles.createButton} 
+        onPress={createGroup}
+        {...getTestProps('create-group-submit')}
+      >
         <Text style={styles.createButtonText}>Create Group</Text>
       </TouchableOpacity>
     </KeyboardAvoidingView>

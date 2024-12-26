@@ -1,0 +1,651 @@
+00:52:15.459 detox[91143] [90mB[39m node_modules/.bin/detox test --configuration ios.sim.debug
+  data: {
+    "id": "2fa12ade-3dc9-1ac7-7143-9b146bb105bc",
+    "detoxConfig": {
+      "configurationName": "ios.sim.debug",
+      "apps": {
+        "default": {
+          "type": "ios.app",
+          "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/kin_keeper.app",
+          "build": "xcodebuild -workspace ios/kin_keeper.xcworkspace -scheme kin_keeper -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build"
+        }
+      },
+      "artifacts": {
+        "rootDir": "artifacts/ios.sim.debug.2024-12-26 00-52-15Z",
+        "plugins": {
+          "log": {
+            "enabled": true,
+            "keepOnlyFailedTestsArtifacts": false
+          },
+          "screenshot": {
+            "shouldTakeAutomaticSnapshots": true,
+            "keepOnlyFailedTestsArtifacts": true,
+            "enabled": true
+          },
+          "video": {
+            "android": {
+              "bitRate": 4000000
+            },
+            "ios": {
+              "codec": "h264"
+            },
+            "enabled": false,
+            "keepOnlyFailedTestsArtifacts": false
+          },
+          "instruments": {
+            "enabled": false,
+            "keepOnlyFailedTestsArtifacts": false
+          },
+          "uiHierarchy": {
+            "enabled": false,
+            "keepOnlyFailedTestsArtifacts": false
+          }
+        }
+      },
+      "behavior": {
+        "init": {
+          "keepLockFile": false,
+          "reinstallApp": true,
+          "launchApp": true,
+          "reinstall": true,
+          "exposeGlobals": true
+        },
+        "cleanup": {
+          "shutdownDevice": false
+        },
+        "launchApp": "auto"
+      },
+      "cli": {
+        "configuration": "ios.sim.debug",
+        "start": true
+      },
+      "commands": [
+        {
+          "appName": "default",
+          "build": "xcodebuild -workspace ios/kin_keeper.xcworkspace -scheme kin_keeper -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build"
+        }
+      ],
+      "device": {
+        "type": "ios.simulator",
+        "device": {
+          "type": "iPhone 15",
+          "os": "iOS 17"
+        }
+      },
+      "logger": {
+        "level": "info",
+        "overrideConsole": true,
+        "options": {
+          "showLoggerName": true,
+          "showPid": true,
+          "showLevel": false,
+          "showMetadata": false,
+          "basepath": "/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src",
+          "prefixers": {},
+          "stringifiers": {}
+        }
+      },
+      "testRunner": {
+        "retries": 0,
+        "forwardEnv": false,
+        "detached": false,
+        "bail": false,
+        "jest": {
+          "setupTimeout": 300000,
+          "teardownTimeout": 30000,
+          "retryAfterCircusRetries": false,
+          "reportWorkerAssign": true
+        },
+        "args": {
+          "$0": "jest",
+          "_": [],
+          "config": "e2e/jest.config.js",
+          "--": []
+        }
+      },
+      "session": {
+        "autoStart": true,
+        "debugSynchronization": 10000
+      }
+    },
+    "detoxIPCServer": "primary-91143",
+    "testResults": [],
+    "testSessionIndex": 0,
+    "workersCount": 0
+  }
+00:52:15.463 detox[91143] [90mi[39m Server path not specified, so defaulting to ipc.config.socketRoot + ipc.config.appspace + ipc.config.id /tmp/detox.primary-91143
+00:52:15.463 detox[91143] [90mi[39m starting server on  /tmp/detox.primary-91143 
+00:52:15.463 detox[91143] [90mi[39m starting TLS server false
+00:52:15.463 detox[91143] [90mi[39m starting server as Unix || Windows Socket
+00:52:15.465 detox[91143] [90mi[39m Detox server listening on localhost:59849...
+00:52:15.467 detox[91143] [90mi[39m Serialized the session state at: /private/var/folders/yd/g5ftnqb52k1g83p_zq4qwpkh0000gn/T/2fa12ade-3dc9-1ac7-7143-9b146bb105bc.detox.json
+00:52:15.468 detox[91143] [90mB[39m jest --config e2e/jest.config.js
+00:52:15.990 detox[91144] [90mi[39m Service path not specified, so defaulting to ipc.config.socketRoot + ipc.config.appspace + id 
+00:52:15.991 detox[91144] [90mi[39m requested connection to  primary-91143 /tmp/detox.primary-91143
+00:52:15.991 detox[91144] [90mi[39m Connecting client on Unix Socket : /tmp/detox.primary-91143
+00:52:15.992 detox[91143] [90mi[39m ## socket connection to server detected ##
+00:52:15.992 detox[91144] [90mi[39m retrying reset
+00:52:15.992 detox[91144] [90mi[39m dispatching event to  primary-91143 /tmp/detox.primary-91143  :  registerContext , { id: 'secondary-91144' }
+00:52:15.993 detox[91143] [90mi[39m received event of :  registerContext { id: 'secondary-91144' }
+00:52:15.993 detox[91143] [90mi[39m dispatching event to socket  :  registerContextDone {
+  testResults: [],
+  testSessionIndex: 0,
+  unsafe_earlyTeardown: undefined
+}
+00:52:15.993 detox[91144] [90mi[39m ## received events ##
+00:52:15.993 detox[91144] [90mi[39m detected event registerContextDone { testResults: [], testSessionIndex: 0 }
+00:52:16.049 detox[91144] [90mB[39m e2e/GroupsFlow.test.ts
+00:52:16.056 detox[91144] [90mB[39m set up environment
+00:52:16.057 detox[91143] [90mi[39m received event of :  registerWorker { workerId: 'w1' }
+00:52:16.057 detox[91143] [90mi[39m dispatching event to socket  :  registerWorkerDone { workersCount: 1 }
+00:52:16.057 detox[91143] [90mi[39m broadcasting event to all known sockets listening to  /tmp/detox.primary-91143  :   sessionStateUpdate { workersCount: 1 }
+00:52:16.057 detox[91144] [90mi[39m dispatching event to  primary-91143 /tmp/detox.primary-91143  :  registerWorker , { workerId: 'w1' }
+00:52:16.057 detox[91144] [90mi[39m ## received events ##
+00:52:16.058 detox[91144] [90mi[39m detected event registerWorkerDone { workersCount: 1 }
+00:52:16.143 detox[91144] [90mi[39m ## received events ##
+00:52:16.143 detox[91144] [90mi[39m detected event sessionStateUpdate { workersCount: 1 }
+00:52:16.147 detox[91143] [90mB[39m connection :59849<->:59850
+00:52:16.148 detox[91144] [90mi[39m opened web socket to: ws://localhost:59849
+00:52:16.149 detox[91144] [90mi[39m send message
+  data: {"type":"login","params":{"sessionId":"783129fa-7af8-2ad8-b5b1-66023a035825","role":"tester"},"messageId":0}
+00:52:16.150 detox[91143] [90mi[39m get
+  data: {"type":"login","params":{"sessionId":"783129fa-7af8-2ad8-b5b1-66023a035825","role":"tester"},"messageId":0}
+00:52:16.150 detox[91143] [90mi[39m created session 783129fa-7af8-2ad8-b5b1-66023a035825
+00:52:16.150 detox[91143] [90mi[39m send
+  data: {
+    "type": "loginSuccess",
+    "params": {
+      "testerConnected": true,
+      "appConnected": false
+    },
+    "messageId": 0
+  }
+00:52:16.150 detox[91143] [90mi[39m tester joined session 783129fa-7af8-2ad8-b5b1-66023a035825
+00:52:16.151 detox[91144] [90mi[39m get message
+  data: {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+   
+00:52:16.213 detox[91143] [90mi[39m received event of :  allocateDevice {
+  deviceConfig: {
+    type: 'ios.simulator',
+    device: { type: 'iPhone 15', os: 'iOS 17' }
+  }
+}
+00:52:16.213 detox[91144] [90mi[39m dispatching event to  primary-91143 /tmp/detox.primary-91143  :  allocateDevice , {
+  deviceConfig: {
+    type: 'ios.simulator',
+    device: { type: 'iPhone 15', os: 'iOS 17' }
+  }
+}
+00:52:16.216 detox[91143] [90mB[39m init
+  args: ()
+00:52:16.218 detox[91143] [90mE[39m init
+00:52:16.218 detox[91143] [90mB[39m allocate
+  data: {
+    "type": "ios.simulator",
+    "device": {
+      "type": "iPhone 15",
+      "os": "iOS 17"
+    }
+  }
+00:52:16.219 detox[91143] [90mi[39m applesimutils --list --byOS "iOS 17" --byType "iPhone 15"
+00:52:16.371 detox[91143] [90mi[39m [
+
+]
+
+00:52:16.372 detox[91143] [90mE[39m allocate
+  error: Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"
+  
+  HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.
+00:52:16.372 detox[91143] [90mi[39m dispatching event to socket  :  allocateDeviceDone {
+  error: {
+    name: 'DetoxRuntimeError',
+    message: 'Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+      '\n' +
+      `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+    stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+      '\n' +
+      `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+      '    at SimulatorAllocDriver._queryDevices (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+      '    at async SimulatorAllocDriver._groupDevicesByStatus (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+      '    at async SimulatorAllocDriver._findOrCreateDevice (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+      '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+      '    at async safeAsync (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+      '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+      '    at async ExclusiveLockfile.exclusively (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+      '    at async SimulatorAllocDriver.allocate (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+      '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+  }
+}
+00:52:16.372 detox[91144] [90mi[39m ## received events ##
+00:52:16.373 detox[91144] [90mi[39m detected event allocateDeviceDone {
+  error: {
+    name: 'DetoxRuntimeError',
+    message: 'Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+      '\n' +
+      `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+    stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+      '\n' +
+      `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+      '    at SimulatorAllocDriver._queryDevices (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+      '    at async SimulatorAllocDriver._groupDevicesByStatus (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+      '    at async SimulatorAllocDriver._findOrCreateDevice (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+      '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+      '    at async safeAsync (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+      '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+      '    at async ExclusiveLockfile.exclusively (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+      '    at async SimulatorAllocDriver.allocate (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+      '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+  }
+}
+00:52:16.373 detox[91144] [90mE[39m set up environment
+  error: DetoxRuntimeError: Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"
+  
+  HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.
+      at SimulatorAllocDriver._queryDevices (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)
+      at async SimulatorAllocDriver._groupDevicesByStatus (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)
+      at async SimulatorAllocDriver._findOrCreateDevice (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)
+      at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14
+      at async safeAsync (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/safeAsync.js:4:13)
+      at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24
+      at async ExclusiveLockfile.exclusively (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)
+      at async SimulatorAllocDriver.allocate (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)
+      at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22
+00:52:16.373 detox[91144] [90mB[39m tear down environment
+00:52:16.374 detox[91144] [90mB[39m onBeforeCleanup
+  args: ()
+00:52:16.375 detox[91144] [90mi[39m saving FileArtifact to: artifacts/ios.sim.debug.2024-12-26 00-52-15Z/detox_pid_91144.json.log { append: true }
+00:52:16.375 detox[91144] [90mi[39m saving FileArtifact to: artifacts/ios.sim.debug.2024-12-26 00-52-15Z/detox_pid_91144.log { append: true }
+00:52:16.375 detox[91144] [90mE[39m onBeforeCleanup
+00:52:16.376 detox[91143] [90mi[39m tester exited session 783129fa-7af8-2ad8-b5b1-66023a035825
+00:52:16.377 detox[91143] [90mE[39m connection :59849<->:59850
+00:52:16.377 detox[91144] [90mE[39m tear down environment
+00:52:16.377 detox[91144] [90mE[39m e2e/GroupsFlow.test.ts
+00:52:16.388 detox[91144] [90mB[39m e2e/features/GroupManagement.test.ts
+00:52:16.389 detox[91143] [90mi[39m received event of :  registerWorker { workerId: 'w1' }
+00:52:16.389 detox[91143] [90mi[39m dispatching event to socket  :  registerWorkerDone { workersCount: 1 }
+00:52:16.389 detox[91144] [90mB[39m set up environment
+00:52:16.389 detox[91144] [90mi[39m dispatching event to  primary-91143 /tmp/detox.primary-91143  :  registerWorker , { workerId: 'w1' }
+00:52:16.389 detox[91144] [90mi[39m ## received events ##
+00:52:16.389 detox[91144] [90mi[39m detected event registerWorkerDone { workersCount: 1 }
+00:52:16.391 detox[91143] [90mB[39m connection :59849<->:59853
+00:52:16.391 detox[91143] [90mi[39m get
+  data: {"type":"login","params":{"sessionId":"783129fa-7af8-2ad8-b5b1-66023a035825","role":"tester"},"messageId":0}
+00:52:16.391 detox[91144] [90mi[39m opened web socket to: ws://localhost:59849
+00:52:16.391 detox[91144] [90mi[39m send message
+  data: {"type":"login","params":{"sessionId":"783129fa-7af8-2ad8-b5b1-66023a035825","role":"tester"},"messageId":0}
+00:52:16.392 detox[91143] [90mi[39m created session 783129fa-7af8-2ad8-b5b1-66023a035825
+00:52:16.392 detox[91143] [90mi[39m send
+  data: {
+    "type": "loginSuccess",
+    "params": {
+      "testerConnected": true,
+      "appConnected": false
+    },
+    "messageId": 0
+  }
+00:52:16.392 detox[91143] [90mi[39m tester joined session 783129fa-7af8-2ad8-b5b1-66023a035825
+00:52:16.392 detox[91143] [90mi[39m received event of :  allocateDevice {
+  deviceConfig: {
+    type: 'ios.simulator',
+    device: { type: 'iPhone 15', os: 'iOS 17' }
+  }
+}
+00:52:16.392 detox[91143] [90mB[39m allocate
+  data: {
+    "type": "ios.simulator",
+    "device": {
+      "type": "iPhone 15",
+      "os": "iOS 17"
+    }
+  }
+00:52:16.392 detox[91144] [90mi[39m get message
+  data: {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+   
+00:52:16.392 detox[91144] [90mi[39m dispatching event to  primary-91143 /tmp/detox.primary-91143  :  allocateDevice , {
+  deviceConfig: {
+    type: 'ios.simulator',
+    device: { type: 'iPhone 15', os: 'iOS 17' }
+  }
+}
+00:52:16.393 detox[91143] [90mi[39m applesimutils --list --byOS "iOS 17" --byType "iPhone 15"
+00:52:16.516 detox[91143] [90mi[39m [
+
+]
+
+00:52:16.516 detox[91143] [90mE[39m allocate
+  error: Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"
+  
+  HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.
+00:52:16.516 detox[91143] [90mi[39m dispatching event to socket  :  allocateDeviceDone {
+  error: {
+    name: 'DetoxRuntimeError',
+    message: 'Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+      '\n' +
+      `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+    stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+      '\n' +
+      `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+      '    at SimulatorAllocDriver._queryDevices (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+      '    at async SimulatorAllocDriver._groupDevicesByStatus (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+      '    at async SimulatorAllocDriver._findOrCreateDevice (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+      '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+      '    at async safeAsync (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+      '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+      '    at async ExclusiveLockfile.exclusively (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+      '    at async SimulatorAllocDriver.allocate (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+      '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+  }
+}
+00:52:16.516 detox[91144] [90mi[39m ## received events ##
+00:52:16.517 detox[91144] [90mi[39m detected event allocateDeviceDone {
+  error: {
+    name: 'DetoxRuntimeError',
+    message: 'Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+      '\n' +
+      `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+    stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+      '\n' +
+      `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+      '    at SimulatorAllocDriver._queryDevices (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+      '    at async SimulatorAllocDriver._groupDevicesByStatus (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+      '    at async SimulatorAllocDriver._findOrCreateDevice (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+      '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+      '    at async safeAsync (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+      '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+      '    at async ExclusiveLockfile.exclusively (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+      '    at async SimulatorAllocDriver.allocate (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+      '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+  }
+}
+00:52:16.517 detox[91144] [90mE[39m set up environment
+  error: DetoxRuntimeError: Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"
+  
+  HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.
+      at SimulatorAllocDriver._queryDevices (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async SimulatorAllocDriver._groupDevicesByStatus (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)
+      at async SimulatorAllocDriver._findOrCreateDevice (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)
+      at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14
+      at async safeAsync (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/safeAsync.js:4:13)
+      at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24
+      at async ExclusiveLockfile.exclusively (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)
+      at async SimulatorAllocDriver.allocate (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)
+      at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22
+00:52:16.517 detox[91144] [90mB[39m tear down environment
+00:52:16.517 detox[91144] [90mB[39m onBeforeCleanup
+  args: ()
+00:52:16.517 detox[91144] [90mi[39m saving FileArtifact to: artifacts/ios.sim.debug.2024-12-26 00-52-15Z/detox_pid_91144.json.log { append: true }
+00:52:16.517 detox[91144] [90mi[39m saving FileArtifact to: artifacts/ios.sim.debug.2024-12-26 00-52-15Z/detox_pid_91144.log { append: true }
+00:52:16.517 detox[91144] [90mE[39m onBeforeCleanup
+00:52:16.518 detox[91143] [90mi[39m tester exited session 783129fa-7af8-2ad8-b5b1-66023a035825
+00:52:16.518 detox[91143] [90mE[39m connection :59849<->:59853
+00:52:16.518 detox[91144] [90mE[39m tear down environment
+00:52:16.518 detox[91144] [90mE[39m e2e/features/GroupManagement.test.ts
+00:52:16.524 detox[91143] [90mi[39m received event of :  reportTestResults {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/Users/sachingupta/CognisiveLabs/kin_keeper/e2e/GroupsFlow.test.ts',
+      testExecError: {
+        name: 'DetoxRuntimeError',
+        message: 'Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+        stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+          '    at SimulatorAllocDriver._queryDevices (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+          '    at async SimulatorAllocDriver._groupDevicesByStatus (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+          '    at async SimulatorAllocDriver._findOrCreateDevice (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+          '    at async safeAsync (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+          '    at async ExclusiveLockfile.exclusively (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+          '    at async SimulatorAllocDriver.allocate (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+      },
+      isPermanentFailure: false
+    },
+    {
+      success: false,
+      testFilePath: '/Users/sachingupta/CognisiveLabs/kin_keeper/e2e/features/GroupManagement.test.ts',
+      testExecError: {
+        name: 'DetoxRuntimeError',
+        message: 'Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+        stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+          '    at SimulatorAllocDriver._queryDevices (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+          '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+          '    at async SimulatorAllocDriver._groupDevicesByStatus (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+          '    at async SimulatorAllocDriver._findOrCreateDevice (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+          '    at async safeAsync (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+          '    at async ExclusiveLockfile.exclusively (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+          '    at async SimulatorAllocDriver.allocate (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+      },
+      isPermanentFailure: false
+    }
+  ]
+}
+00:52:16.524 detox[91144] [90mi[39m dispatching event to  primary-91143 /tmp/detox.primary-91143  :  reportTestResults , {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/Users/sachingupta/CognisiveLabs/kin_keeper/e2e/GroupsFlow.test.ts',
+      testExecError: {
+        name: 'DetoxRuntimeError',
+        message: 'Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+        stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+          '    at SimulatorAllocDriver._queryDevices (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+          '    at async SimulatorAllocDriver._groupDevicesByStatus (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+          '    at async SimulatorAllocDriver._findOrCreateDevice (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+          '    at async safeAsync (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+          '    at async ExclusiveLockfile.exclusively (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+          '    at async SimulatorAllocDriver.allocate (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+      },
+      isPermanentFailure: false
+    },
+    {
+      success: false,
+      testFilePath: '/Users/sachingupta/CognisiveLabs/kin_keeper/e2e/features/GroupManagement.test.ts',
+      testExecError: {
+        name: 'DetoxRuntimeError',
+        message: 'Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+        stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+          '    at SimulatorAllocDriver._queryDevices (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+          '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+          '    at async SimulatorAllocDriver._groupDevicesByStatus (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+          '    at async SimulatorAllocDriver._findOrCreateDevice (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+          '    at async safeAsync (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+          '    at async ExclusiveLockfile.exclusively (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+          '    at async SimulatorAllocDriver.allocate (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+      },
+      isPermanentFailure: false
+    }
+  ]
+}
+00:52:16.525 detox[91143] [90mi[39m dispatching event to socket  :  reportTestResultsDone {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/Users/sachingupta/CognisiveLabs/kin_keeper/e2e/GroupsFlow.test.ts',
+      testExecError: {
+        name: 'DetoxRuntimeError',
+        message: 'Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+        stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+          '    at SimulatorAllocDriver._queryDevices (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+          '    at async SimulatorAllocDriver._groupDevicesByStatus (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+          '    at async SimulatorAllocDriver._findOrCreateDevice (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+          '    at async safeAsync (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+          '    at async ExclusiveLockfile.exclusively (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+          '    at async SimulatorAllocDriver.allocate (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+      },
+      isPermanentFailure: false
+    },
+    {
+      success: false,
+      testFilePath: '/Users/sachingupta/CognisiveLabs/kin_keeper/e2e/features/GroupManagement.test.ts',
+      testExecError: {
+        name: 'DetoxRuntimeError',
+        message: 'Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+        stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+          '    at SimulatorAllocDriver._queryDevices (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+          '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+          '    at async SimulatorAllocDriver._groupDevicesByStatus (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+          '    at async SimulatorAllocDriver._findOrCreateDevice (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+          '    at async safeAsync (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+          '    at async ExclusiveLockfile.exclusively (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+          '    at async SimulatorAllocDriver.allocate (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+      },
+      isPermanentFailure: false
+    }
+  ]
+}
+00:52:16.525 detox[91143] [90mi[39m broadcasting event to all known sockets listening to  /tmp/detox.primary-91143  :   sessionStateUpdate {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/Users/sachingupta/CognisiveLabs/kin_keeper/e2e/GroupsFlow.test.ts',
+      testExecError: {
+        name: 'DetoxRuntimeError',
+        message: 'Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+        stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+          '    at SimulatorAllocDriver._queryDevices (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+          '    at async SimulatorAllocDriver._groupDevicesByStatus (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+          '    at async SimulatorAllocDriver._findOrCreateDevice (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+          '    at async safeAsync (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+          '    at async ExclusiveLockfile.exclusively (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+          '    at async SimulatorAllocDriver.allocate (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+      },
+      isPermanentFailure: false
+    },
+    {
+      success: false,
+      testFilePath: '/Users/sachingupta/CognisiveLabs/kin_keeper/e2e/features/GroupManagement.test.ts',
+      testExecError: {
+        name: 'DetoxRuntimeError',
+        message: 'Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+        stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+          '    at SimulatorAllocDriver._queryDevices (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+          '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+          '    at async SimulatorAllocDriver._groupDevicesByStatus (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+          '    at async SimulatorAllocDriver._findOrCreateDevice (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+          '    at async safeAsync (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+          '    at async ExclusiveLockfile.exclusively (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+          '    at async SimulatorAllocDriver.allocate (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+      },
+      isPermanentFailure: false
+    }
+  ]
+}
+00:52:16.525 detox[91144] [90mi[39m ## received events ##
+00:52:16.525 detox[91144] [90mi[39m detected event reportTestResultsDone {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/Users/sachingupta/CognisiveLabs/kin_keeper/e2e/GroupsFlow.test.ts',
+      testExecError: {
+        name: 'DetoxRuntimeError',
+        message: 'Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+        stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+          '    at SimulatorAllocDriver._queryDevices (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+          '    at async SimulatorAllocDriver._groupDevicesByStatus (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+          '    at async SimulatorAllocDriver._findOrCreateDevice (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+          '    at async safeAsync (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+          '    at async ExclusiveLockfile.exclusively (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+          '    at async SimulatorAllocDriver.allocate (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+      },
+      isPermanentFailure: false
+    },
+    {
+      success: false,
+      testFilePath: '/Users/sachingupta/CognisiveLabs/kin_keeper/e2e/features/GroupManagement.test.ts',
+      testExecError: {
+        name: 'DetoxRuntimeError',
+        message: 'Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+        stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15" and by OS = "iOS 17"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+          '    at SimulatorAllocDriver._queryDevices (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+          '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+          '    at async SimulatorAllocDriver._groupDevicesByStatus (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+          '    at async SimulatorAllocDriver._findOrCreateDevice (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+          '    at async safeAsync (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+          '    at async ExclusiveLockfile.exclusively (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+          '    at async SimulatorAllocDriver.allocate (/Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+          '    at async /Users/sachingupta/CognisiveLabs/kin_keeper/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+      },
+      isPermanentFailure: false
+    }
+  ]
+}
+00:52:16.526 detox[91143] [90mi[39m socket disconnected secondary-91144
+00:52:16.526 detox[91144] [90mi[39m connection closed primary-91143 /tmp/detox.primary-91143 0 tries remaining of 0
+00:52:16.526 detox[91144] [90mi[39m secondary-91144 exceeded connection rety amount of  or stopRetrying flag set.
+00:52:16.632 detox[91143] [90mE[39m Command failed with exit code = 1:
+jest --config e2e/jest.config.js
+00:52:16.633 detox[91143] [90mB[39m cleanup
+  args: ()
+00:52:16.633 detox[91143] [90mE[39m cleanup
+00:52:16.634 detox[91143] [90mi[39m Detox server has been closed gracefully
+00:52:16.634 detox[91143] [90mE[39m node_modules/.bin/detox test --configuration ios.sim.debug

@@ -11,6 +11,7 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/types';
 import { Group } from '../types';
 import { loadState } from '../utils/storage';
+import { getTestProps } from '../utils/testUtils';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Groups'>;
 
@@ -47,6 +48,7 @@ export const GroupsScreen = ({ navigation }: Props) => {
               key={group.id}
               style={styles.groupCard}
               onPress={() => navigation.navigate('GroupDetails', { groupId: group.id })}
+              {...getTestProps(`group-${group.id}`)}
             >
               <Text style={styles.groupName}>{group.name}</Text>
               <Text style={styles.memberCount}>
@@ -59,6 +61,7 @@ export const GroupsScreen = ({ navigation }: Props) => {
       <TouchableOpacity
         style={styles.fab}
         onPress={() => navigation.navigate('CreateGroup')}
+        {...getTestProps('create-group-button')}
       >
         <Text style={styles.fabText}>+</Text>
       </TouchableOpacity>

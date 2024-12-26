@@ -75,6 +75,14 @@ export const GroupDetailsScreen = ({ route, navigation }: Props) => {
     loadGroupJobs();
   }, []);
 
+  useEffect(() => {
+    if (route.params.refresh) {
+      loadGroupJobs();
+      // Reset the refresh parameter
+      navigation.setParams({ refresh: undefined });
+    }
+  }, [route.params.refresh]);
+
   const loadGroupDetails = async () => {
     const state = await loadState();
     const foundGroup = state.groups.find(g => g.id === route.params.groupId);
@@ -129,7 +137,7 @@ export const GroupDetailsScreen = ({ route, navigation }: Props) => {
         id: generateId(),
         name: newMemberName.trim(),
         email: newMemberEmail.trim(),
-        role: 'regular',
+        role: 'member',
         availability: DEFAULT_AVAILABILITY,
         jobPreferences: {},
       };
@@ -224,7 +232,7 @@ export const GroupDetailsScreen = ({ route, navigation }: Props) => {
       return;
     }
 
-    const newRole: MemberRole = member.role === 'admin' ? 'regular' : 'admin';
+    const newRole: MemberRole = member.role === 'admin' ? 'member' : 'admin';
     
     try {
       const updatedGroup = {

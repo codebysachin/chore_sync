@@ -1,9 +1,16 @@
 export type RootStackParamList = {
   Groups: undefined;
-  GroupDetails: { groupId: string };
   CreateGroup: undefined;
-  CreateJob: { groupId?: string };
-  JobDetails: { jobId: string };
+  GroupDetails: {
+    groupId: string;
+    refresh?: boolean;
+  };
+  CreateJob: {
+    groupId?: string;
+  };
+  JobDetails: {
+    jobId: string;
+  };
 };
 
 export type BottomTabParamList = {

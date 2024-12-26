@@ -1,0 +1,127 @@
+01:26:27.889 detox[93879] [90mB[39m [33mlifecycle[39m ../../../../opt/homebrew/bin/detox test --configuration ios.sim.debug --loglevel trace
+  data: {
+    "id": "7a5d7029-0a9a-0b7a-13d6-122b13318755",
+    "detoxConfig": {
+      "configurationName": "ios.sim.debug",
+      "apps": {
+        "default": {
+          "type": "ios.app",
+          "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/kin_keeper.app",
+          "build": "xcodebuild -workspace ios/kin_keeper.xcworkspace -scheme kin_keeper -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build"
+        }
+      },
+      "artifacts": {
+        "rootDir": "artifacts/ios.sim.debug.2024-12-26 01-26-27Z",
+        "plugins": {
+          "log": {
+            "enabled": true,
+            "keepOnlyFailedTestsArtifacts": false
+          },
+          "screenshot": {
+            "shouldTakeAutomaticSnapshots": true,
+            "keepOnlyFailedTestsArtifacts": true,
+            "enabled": true
+          },
+          "video": {
+            "android": {
+              "bitRate": 4000000
+            },
+            "ios": {
+              "codec": "h264"
+            },
+            "enabled": false,
+            "keepOnlyFailedTestsArtifacts": false
+          },
+          "instruments": {
+            "enabled": false,
+            "keepOnlyFailedTestsArtifacts": false
+          },
+          "uiHierarchy": {
+            "enabled": false,
+            "keepOnlyFailedTestsArtifacts": false
+          }
+        }
+      },
+      "behavior": {
+        "init": {
+          "keepLockFile": false,
+          "reinstallApp": true,
+          "launchApp": true,
+          "reinstall": true,
+          "exposeGlobals": true
+        },
+        "cleanup": {
+          "shutdownDevice": false
+        },
+        "launchApp": "auto"
+      },
+      "cli": {
+        "configuration": "ios.sim.debug",
+        "loglevel": "trace",
+        "start": true
+      },
+      "commands": [
+        {
+          "appName": "default",
+          "build": "xcodebuild -workspace ios/kin_keeper.xcworkspace -scheme kin_keeper -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build"
+        }
+      ],
+      "device": {
+        "type": "ios.simulator",
+        "device": {
+          "type": "iPhone 15",
+          "os": "iOS 17.5"
+        }
+      },
+      "logger": {
+        "level": "trace",
+        "overrideConsole": true,
+        "options": {
+          "showLoggerName": true,
+          "showPid": true,
+          "showLevel": false,
+          "showMetadata": false,
+          "basepath": "/opt/homebrew/lib/node_modules/detox/src",
+          "prefixers": {},
+          "stringifiers": {}
+        }
+      },
+      "testRunner": {
+        "retries": 0,
+        "forwardEnv": false,
+        "detached": false,
+        "bail": false,
+        "jest": {
+          "setupTimeout": 300000,
+          "teardownTimeout": 30000,
+          "retryAfterCircusRetries": false,
+          "reportWorkerAssign": true
+        },
+        "args": {
+          "$0": "jest",
+          "_": [],
+          "config": "e2e/jest.config.js",
+          "--": []
+        }
+      },
+      "session": {
+        "autoStart": true,
+        "debugSynchronization": 10000
+      }
+    },
+    "detoxIPCServer": "primary-93879",
+    "testResults": [],
+    "testSessionIndex": 0,
+    "workersCount": 0
+  }
+01:26:27.892 detox[93879] [90mi[39m [33mipc[39m Server path not specified, so defaulting to ipc.config.socketRoot + ipc.config.appspace + ipc.config.id /tmp/detox.primary-93879
+01:26:27.892 detox[93879] [90mi[39m [33mipc[39m starting server on  /tmp/detox.primary-93879 
+01:26:27.893 detox[93879] [90mi[39m [33mipc[39m starting TLS server false
+01:26:27.893 detox[93879] [90mi[39m [33mipc[39m starting server as Unix || Windows Socket
+01:26:27.894 detox[93879] [90mi[39m [33mws-server[39m Detox server listening on localhost:63533...
+01:26:27.897 detox[93879] [90mi[39m [33mlifecycle[39m Serialized the session state at: /private/var/folders/yd/g5ftnqb52k1g83p_zq4qwpkh0000gn/T/7a5d7029-0a9a-0b7a-13d6-122b13318755.detox.json
+01:26:27.897 detox[93879] [90mB[39m [33mlifecycle[39m jest --config e2e/jest.config.js
+01:26:27.903 detox[93879] [90mE[39m [33mlifecycle[39m Command failed with exit code = 127:
+jest --config e2e/jest.config.js
+01:26:27.903 detox[93879] [90mi[39m [33mws-server[39m Detox server has been closed gracefully
+01:26:27.904 detox[93879] [90mE[39m [33mlifecycle[39m ../../../../opt/homebrew/bin/detox test --configuration ios.sim.debug --loglevel trace

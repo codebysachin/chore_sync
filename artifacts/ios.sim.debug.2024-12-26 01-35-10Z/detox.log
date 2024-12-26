@@ -1,0 +1,637 @@
+01:35:10.990 detox[95957] [90mB[39m [33mlifecycle[39m ../../../../opt/homebrew/bin/detox test --configuration ios.sim.debug --loglevel trace
+  data: {
+    "id": "c85cb01c-811e-6c6a-0ad9-c31ba1f79911",
+    "detoxConfig": {
+      "configurationName": "ios.sim.debug",
+      "apps": {
+        "default": {
+          "type": "ios.app",
+          "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/kin_keeper.app",
+          "build": "xcodebuild -workspace ios/kin_keeper.xcworkspace -scheme kin_keeper -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build"
+        }
+      },
+      "artifacts": {
+        "rootDir": "artifacts/ios.sim.debug.2024-12-26 01-35-10Z",
+        "plugins": {
+          "log": {
+            "enabled": true,
+            "keepOnlyFailedTestsArtifacts": false
+          },
+          "screenshot": {
+            "shouldTakeAutomaticSnapshots": true,
+            "keepOnlyFailedTestsArtifacts": true,
+            "enabled": true
+          },
+          "video": {
+            "android": {
+              "bitRate": 4000000
+            },
+            "ios": {
+              "codec": "h264"
+            },
+            "enabled": false,
+            "keepOnlyFailedTestsArtifacts": false
+          },
+          "instruments": {
+            "enabled": false,
+            "keepOnlyFailedTestsArtifacts": false
+          },
+          "uiHierarchy": {
+            "enabled": false,
+            "keepOnlyFailedTestsArtifacts": false
+          }
+        }
+      },
+      "behavior": {
+        "init": {
+          "keepLockFile": false,
+          "reinstallApp": true,
+          "launchApp": true,
+          "reinstall": true,
+          "exposeGlobals": true
+        },
+        "cleanup": {
+          "shutdownDevice": false
+        },
+        "launchApp": "auto"
+      },
+      "cli": {
+        "configuration": "ios.sim.debug",
+        "loglevel": "trace",
+        "start": true
+      },
+      "commands": [
+        {
+          "appName": "default",
+          "build": "xcodebuild -workspace ios/kin_keeper.xcworkspace -scheme kin_keeper -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build"
+        }
+      ],
+      "device": {
+        "type": "ios.simulator",
+        "device": {
+          "type": "iPhone 15 pro"
+        }
+      },
+      "logger": {
+        "level": "trace",
+        "overrideConsole": true,
+        "options": {
+          "showLoggerName": true,
+          "showPid": true,
+          "showLevel": false,
+          "showMetadata": false,
+          "basepath": "/opt/homebrew/lib/node_modules/detox/src",
+          "prefixers": {},
+          "stringifiers": {}
+        }
+      },
+      "testRunner": {
+        "retries": 0,
+        "forwardEnv": false,
+        "detached": false,
+        "bail": false,
+        "jest": {
+          "setupTimeout": 300000,
+          "teardownTimeout": 30000,
+          "retryAfterCircusRetries": false,
+          "reportWorkerAssign": true
+        },
+        "args": {
+          "$0": "jest",
+          "_": [],
+          "config": "e2e/jest.config.js",
+          "--": []
+        }
+      },
+      "session": {
+        "autoStart": true,
+        "debugSynchronization": 10000
+      }
+    },
+    "detoxIPCServer": "primary-95957",
+    "testResults": [],
+    "testSessionIndex": 0,
+    "workersCount": 0
+  }
+01:35:10.996 detox[95957] [90mi[39m [33mipc[39m Server path not specified, so defaulting to ipc.config.socketRoot + ipc.config.appspace + ipc.config.id /tmp/detox.primary-95957
+01:35:10.996 detox[95957] [90mi[39m [33mipc[39m starting server on  /tmp/detox.primary-95957 
+01:35:10.997 detox[95957] [90mi[39m [33mipc[39m starting TLS server false
+01:35:10.997 detox[95957] [90mi[39m [33mipc[39m starting server as Unix || Windows Socket
+01:35:10.999 detox[95957] [90mi[39m [33mws-server[39m Detox server listening on localhost:64760...
+01:35:11.001 detox[95957] [90mi[39m [33mlifecycle[39m Serialized the session state at: /private/var/folders/yd/g5ftnqb52k1g83p_zq4qwpkh0000gn/T/c85cb01c-811e-6c6a-0ad9-c31ba1f79911.detox.json
+01:35:11.002 detox[95957] [90mB[39m [33mlifecycle[39m jest --config e2e/jest.config.js
+01:35:11.644 detox[95958] [90mi[39m [33mipc[39m Service path not specified, so defaulting to ipc.config.socketRoot + ipc.config.appspace + id 
+01:35:11.646 detox[95958] [90mi[39m [33mipc[39m requested connection to  primary-95957 /tmp/detox.primary-95957
+01:35:11.646 detox[95958] [90mi[39m [33mipc[39m Connecting client on Unix Socket : /tmp/detox.primary-95957
+01:35:11.646 detox[95958] [90mi[39m [33mipc[39m retrying reset
+01:35:11.647 detox[95957] [90mi[39m [33mipc[39m ## socket connection to server detected ##
+01:35:11.647 detox[95958] [90mi[39m [33mipc[39m dispatching event to  primary-95957 /tmp/detox.primary-95957  :  registerContext , { id: 'secondary-95958' }
+01:35:11.648 detox[95957] [90mi[39m [33mipc[39m received event of :  registerContext { id: 'secondary-95958' }
+01:35:11.648 detox[95957] [90mi[39m [33mipc[39m dispatching event to socket  :  registerContextDone {
+  testResults: [],
+  testSessionIndex: 0,
+  unsafe_earlyTeardown: undefined
+}
+01:35:11.648 detox[95958] [90mi[39m [33mipc[39m ## received events ##
+01:35:11.648 detox[95958] [90mi[39m [33mipc[39m detected event registerContextDone { testResults: [], testSessionIndex: 0 }
+01:35:11.717 detox[95958] [90mB[39m [33mlifecycle[39m e2e/GroupsFlow.test.ts
+01:35:11.729 detox[95958] [90mB[39m [33mlifecycle[39m set up environment
+01:35:11.730 detox[95958] [90mi[39m [33mipc[39m dispatching event to  primary-95957 /tmp/detox.primary-95957  :  registerWorker , { workerId: 'w1' }
+01:35:11.731 detox[95957] [90mi[39m [33mipc[39m received event of :  registerWorker { workerId: 'w1' }
+01:35:11.731 detox[95957] [90mi[39m [33mipc[39m dispatching event to socket  :  registerWorkerDone { workersCount: 1 }
+01:35:11.731 detox[95957] [90mi[39m [33mipc[39m broadcasting event to all known sockets listening to  /tmp/detox.primary-95957  :   sessionStateUpdate { workersCount: 1 }
+01:35:11.731 detox[95958] [90mi[39m [33mipc[39m ## received events ##
+01:35:11.731 detox[95958] [90mi[39m [33mipc[39m detected event registerWorkerDone { workersCount: 1 }
+01:35:11.855 detox[95958] [90mi[39m [33mipc[39m ## received events ##
+01:35:11.855 detox[95958] [90mi[39m [33mipc[39m detected event sessionStateUpdate { workersCount: 1 }
+01:35:11.857 detox[95957] [90mB[39m [33mws-server[39m[33m@64761[39m connection :64760<->:64761
+01:35:11.858 detox[95958] [90mi[39m [33mws-client[39m opened web socket to: ws://localhost:64760
+01:35:11.859 detox[95958] [90mi[39m [33mws-client[39m send message
+  data: {"type":"login","params":{"sessionId":"8ae869d5-f84c-2dae-db67-b79e96b86d38","role":"tester"},"messageId":0}
+01:35:11.860 detox[95957] [90mi[39m [33mws-server[39m[33m@64761[39m get
+  data: {"type":"login","params":{"sessionId":"8ae869d5-f84c-2dae-db67-b79e96b86d38","role":"tester"},"messageId":0}
+01:35:11.860 detox[95957] [90mi[39m [33mws-server[39m created session 8ae869d5-f84c-2dae-db67-b79e96b86d38
+01:35:11.860 detox[95957] [90mi[39m [33mws-server[39m[33m@64761[39m send
+  data: {
+    "type": "loginSuccess",
+    "params": {
+      "testerConnected": true,
+      "appConnected": false
+    },
+    "messageId": 0
+  }
+01:35:11.861 detox[95957] [90mi[39m [33mws-server[39m tester joined session 8ae869d5-f84c-2dae-db67-b79e96b86d38
+01:35:11.861 detox[95958] [90mi[39m [33mws-client[39m get message
+  data: {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+   
+01:35:11.992 detox[95958] [90mi[39m [33mipc[39m dispatching event to  primary-95957 /tmp/detox.primary-95957  :  allocateDevice , {
+  deviceConfig: { type: 'ios.simulator', device: { type: 'iPhone 15 pro' } }
+}
+01:35:11.993 detox[95957] [90mi[39m [33mipc[39m received event of :  allocateDevice {
+  deviceConfig: { type: 'ios.simulator', device: { type: 'iPhone 15 pro' } }
+}
+01:35:11.998 detox[95957] [90mB[39m [33mdevice[39m init
+  args: ()
+01:35:12.000 detox[95957] [90mE[39m [33mdevice[39m init
+01:35:12.000 detox[95957] [90mB[39m [33mdevice[39m[33m@0[39m allocate
+  data: {
+    "type": "ios.simulator",
+    "device": {
+      "type": "iPhone 15 pro"
+    }
+  }
+01:35:12.001 detox[95957] [90mi[39m [33mchild-process[39m[90m:EXEC_CMD[39m applesimutils --list --byType "iPhone 15 pro"
+01:35:12.160 detox[95957] [90mi[39m [33mchild-process[39m[90m:EXEC_SUCCESS[39m [
+
+]
+
+01:35:12.161 detox[95957] [90mE[39m [33mdevice[39m[33m@0[39m allocate
+  error: Failed to find a device by type = "iPhone 15 pro"
+  
+  HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.
+01:35:12.161 detox[95957] [90mi[39m [33mipc[39m dispatching event to socket  :  allocateDeviceDone {
+  error: {
+    name: 'DetoxRuntimeError',
+    message: 'Failed to find a device by type = "iPhone 15 pro"\n' +
+      '\n' +
+      `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+    stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15 pro"\n' +
+      '\n' +
+      `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+      '    at SimulatorAllocDriver._queryDevices (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+      '    at async SimulatorAllocDriver._groupDevicesByStatus (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+      '    at async SimulatorAllocDriver._findOrCreateDevice (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+      '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+      '    at async safeAsync (/opt/homebrew/lib/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+      '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+      '    at async ExclusiveLockfile.exclusively (/opt/homebrew/lib/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+      '    at async SimulatorAllocDriver.allocate (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+      '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+  }
+}
+01:35:12.162 detox[95958] [90mi[39m [33mipc[39m ## received events ##
+01:35:12.162 detox[95958] [90mi[39m [33mipc[39m detected event allocateDeviceDone {
+  error: {
+    name: 'DetoxRuntimeError',
+    message: 'Failed to find a device by type = "iPhone 15 pro"\n' +
+      '\n' +
+      `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+    stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15 pro"\n' +
+      '\n' +
+      `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+      '    at SimulatorAllocDriver._queryDevices (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+      '    at async SimulatorAllocDriver._groupDevicesByStatus (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+      '    at async SimulatorAllocDriver._findOrCreateDevice (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+      '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+      '    at async safeAsync (/opt/homebrew/lib/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+      '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+      '    at async ExclusiveLockfile.exclusively (/opt/homebrew/lib/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+      '    at async SimulatorAllocDriver.allocate (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+      '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+  }
+}
+01:35:12.163 detox[95958] [90mE[39m [33mlifecycle[39m set up environment
+  error: DetoxRuntimeError: Failed to find a device by type = "iPhone 15 pro"
+  
+  HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.
+      at SimulatorAllocDriver._queryDevices (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)
+      at async SimulatorAllocDriver._groupDevicesByStatus (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)
+      at async SimulatorAllocDriver._findOrCreateDevice (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)
+      at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14
+      at async safeAsync (/opt/homebrew/lib/node_modules/detox/src/utils/safeAsync.js:4:13)
+      at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24
+      at async ExclusiveLockfile.exclusively (/opt/homebrew/lib/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)
+      at async SimulatorAllocDriver.allocate (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)
+      at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22
+01:35:12.163 detox[95958] [90mB[39m [33mlifecycle[39m tear down environment
+01:35:12.163 detox[95958] [90mB[39m [33martifacts-manager[39m onBeforeCleanup
+  args: ()
+01:35:12.165 detox[95958] [90mi[39m [33martifact[39m[90m:ARTIFACT_SAVE[39m saving FileArtifact to: artifacts/ios.sim.debug.2024-12-26 01-35-10Z/detox_pid_95958.json.log { append: true }
+01:35:12.165 detox[95958] [90mi[39m [33martifact[39m[90m:ARTIFACT_SAVE[39m saving FileArtifact to: artifacts/ios.sim.debug.2024-12-26 01-35-10Z/detox_pid_95958.log { append: true }
+01:35:12.165 detox[95958] [90mE[39m [33martifacts-manager[39m onBeforeCleanup
+01:35:12.167 detox[95957] [90mi[39m [33mws-server[39m tester exited session 8ae869d5-f84c-2dae-db67-b79e96b86d38
+01:35:12.167 detox[95957] [90mE[39m [33mws-server[39m[33m@64761[39m connection :64760<->:64761
+01:35:12.167 detox[95958] [90mE[39m [33mlifecycle[39m tear down environment
+01:35:12.167 detox[95958] [90mE[39m [33mlifecycle[39m e2e/GroupsFlow.test.ts
+01:35:12.178 detox[95958] [90mB[39m [33mlifecycle[39m e2e/features/GroupManagement.test.ts
+01:35:12.179 detox[95957] [90mi[39m [33mipc[39m received event of :  registerWorker { workerId: 'w1' }
+01:35:12.179 detox[95957] [90mi[39m [33mipc[39m dispatching event to socket  :  registerWorkerDone { workersCount: 1 }
+01:35:12.179 detox[95958] [90mB[39m [33mlifecycle[39m set up environment
+01:35:12.179 detox[95958] [90mi[39m [33mipc[39m dispatching event to  primary-95957 /tmp/detox.primary-95957  :  registerWorker , { workerId: 'w1' }
+01:35:12.179 detox[95958] [90mi[39m [33mipc[39m ## received events ##
+01:35:12.180 detox[95958] [90mi[39m [33mipc[39m detected event registerWorkerDone { workersCount: 1 }
+01:35:12.181 detox[95957] [90mB[39m [33mws-server[39m[33m@64762[39m connection :64760<->:64762
+01:35:12.181 detox[95958] [90mi[39m [33mws-client[39m opened web socket to: ws://localhost:64760
+01:35:12.182 detox[95957] [90mi[39m [33mws-server[39m[33m@64762[39m get
+  data: {"type":"login","params":{"sessionId":"8ae869d5-f84c-2dae-db67-b79e96b86d38","role":"tester"},"messageId":0}
+01:35:12.182 detox[95957] [90mi[39m [33mws-server[39m created session 8ae869d5-f84c-2dae-db67-b79e96b86d38
+01:35:12.182 detox[95957] [90mi[39m [33mws-server[39m[33m@64762[39m send
+  data: {
+    "type": "loginSuccess",
+    "params": {
+      "testerConnected": true,
+      "appConnected": false
+    },
+    "messageId": 0
+  }
+01:35:12.182 detox[95957] [90mi[39m [33mws-server[39m tester joined session 8ae869d5-f84c-2dae-db67-b79e96b86d38
+01:35:12.182 detox[95958] [90mi[39m [33mws-client[39m send message
+  data: {"type":"login","params":{"sessionId":"8ae869d5-f84c-2dae-db67-b79e96b86d38","role":"tester"},"messageId":0}
+01:35:12.182 detox[95958] [90mi[39m [33mws-client[39m get message
+  data: {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+   
+01:35:12.183 detox[95958] [90mi[39m [33mipc[39m dispatching event to  primary-95957 /tmp/detox.primary-95957  :  allocateDevice , {
+  deviceConfig: { type: 'ios.simulator', device: { type: 'iPhone 15 pro' } }
+}
+01:35:12.184 detox[95957] [90mi[39m [33mipc[39m received event of :  allocateDevice {
+  deviceConfig: { type: 'ios.simulator', device: { type: 'iPhone 15 pro' } }
+}
+01:35:12.184 detox[95957] [90mB[39m [33mdevice[39m[33m@1[39m allocate
+  data: {
+    "type": "ios.simulator",
+    "device": {
+      "type": "iPhone 15 pro"
+    }
+  }
+01:35:12.184 detox[95957] [90mi[39m [33mchild-process[39m[90m:EXEC_CMD[39m applesimutils --list --byType "iPhone 15 pro"
+01:35:12.299 detox[95957] [90mi[39m [33mchild-process[39m[90m:EXEC_SUCCESS[39m [
+
+]
+
+01:35:12.299 detox[95957] [90mE[39m [33mdevice[39m[33m@1[39m allocate
+  error: Failed to find a device by type = "iPhone 15 pro"
+  
+  HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.
+01:35:12.300 detox[95957] [90mi[39m [33mipc[39m dispatching event to socket  :  allocateDeviceDone {
+  error: {
+    name: 'DetoxRuntimeError',
+    message: 'Failed to find a device by type = "iPhone 15 pro"\n' +
+      '\n' +
+      `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+    stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15 pro"\n' +
+      '\n' +
+      `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+      '    at SimulatorAllocDriver._queryDevices (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+      '    at async SimulatorAllocDriver._groupDevicesByStatus (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+      '    at async SimulatorAllocDriver._findOrCreateDevice (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+      '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+      '    at async safeAsync (/opt/homebrew/lib/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+      '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+      '    at async ExclusiveLockfile.exclusively (/opt/homebrew/lib/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+      '    at async SimulatorAllocDriver.allocate (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+      '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+  }
+}
+01:35:12.300 detox[95958] [90mi[39m [33mipc[39m ## received events ##
+01:35:12.300 detox[95958] [90mi[39m [33mipc[39m detected event allocateDeviceDone {
+  error: {
+    name: 'DetoxRuntimeError',
+    message: 'Failed to find a device by type = "iPhone 15 pro"\n' +
+      '\n' +
+      `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+    stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15 pro"\n' +
+      '\n' +
+      `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+      '    at SimulatorAllocDriver._queryDevices (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+      '    at async SimulatorAllocDriver._groupDevicesByStatus (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+      '    at async SimulatorAllocDriver._findOrCreateDevice (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+      '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+      '    at async safeAsync (/opt/homebrew/lib/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+      '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+      '    at async ExclusiveLockfile.exclusively (/opt/homebrew/lib/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+      '    at async SimulatorAllocDriver.allocate (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+      '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+  }
+}
+01:35:12.301 detox[95958] [90mE[39m [33mlifecycle[39m set up environment
+  error: DetoxRuntimeError: Failed to find a device by type = "iPhone 15 pro"
+  
+  HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.
+      at SimulatorAllocDriver._queryDevices (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async SimulatorAllocDriver._groupDevicesByStatus (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)
+      at async SimulatorAllocDriver._findOrCreateDevice (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)
+      at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14
+      at async safeAsync (/opt/homebrew/lib/node_modules/detox/src/utils/safeAsync.js:4:13)
+      at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24
+      at async ExclusiveLockfile.exclusively (/opt/homebrew/lib/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)
+      at async SimulatorAllocDriver.allocate (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)
+      at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22
+01:35:12.301 detox[95958] [90mB[39m [33mlifecycle[39m tear down environment
+01:35:12.301 detox[95958] [90mB[39m [33martifacts-manager[39m onBeforeCleanup
+  args: ()
+01:35:12.301 detox[95958] [90mi[39m [33martifact[39m[90m:ARTIFACT_SAVE[39m saving FileArtifact to: artifacts/ios.sim.debug.2024-12-26 01-35-10Z/detox_pid_95958.json.log { append: true }
+01:35:12.302 detox[95957] [90mi[39m [33mws-server[39m tester exited session 8ae869d5-f84c-2dae-db67-b79e96b86d38
+01:35:12.302 detox[95957] [90mE[39m [33mws-server[39m[33m@64762[39m connection :64760<->:64762
+01:35:12.302 detox[95958] [90mi[39m [33martifact[39m[90m:ARTIFACT_SAVE[39m saving FileArtifact to: artifacts/ios.sim.debug.2024-12-26 01-35-10Z/detox_pid_95958.log { append: true }
+01:35:12.302 detox[95958] [90mE[39m [33martifacts-manager[39m onBeforeCleanup
+01:35:12.302 detox[95958] [90mE[39m [33mlifecycle[39m tear down environment
+01:35:12.302 detox[95958] [90mE[39m [33mlifecycle[39m e2e/features/GroupManagement.test.ts
+01:35:12.308 detox[95957] [90mi[39m [33mipc[39m received event of :  reportTestResults {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/Users/sachingupta/CognisiveLabs/kin_keeper/e2e/GroupsFlow.test.ts',
+      testExecError: {
+        name: 'DetoxRuntimeError',
+        message: 'Failed to find a device by type = "iPhone 15 pro"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+        stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15 pro"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+          '    at SimulatorAllocDriver._queryDevices (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+          '    at async SimulatorAllocDriver._groupDevicesByStatus (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+          '    at async SimulatorAllocDriver._findOrCreateDevice (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+          '    at async safeAsync (/opt/homebrew/lib/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+          '    at async ExclusiveLockfile.exclusively (/opt/homebrew/lib/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+          '    at async SimulatorAllocDriver.allocate (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+      },
+      isPermanentFailure: false
+    },
+    {
+      success: false,
+      testFilePath: '/Users/sachingupta/CognisiveLabs/kin_keeper/e2e/features/GroupManagement.test.ts',
+      testExecError: {
+        name: 'DetoxRuntimeError',
+        message: 'Failed to find a device by type = "iPhone 15 pro"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+        stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15 pro"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+          '    at SimulatorAllocDriver._queryDevices (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+          '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+          '    at async SimulatorAllocDriver._groupDevicesByStatus (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+          '    at async SimulatorAllocDriver._findOrCreateDevice (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+          '    at async safeAsync (/opt/homebrew/lib/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+          '    at async ExclusiveLockfile.exclusively (/opt/homebrew/lib/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+          '    at async SimulatorAllocDriver.allocate (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+      },
+      isPermanentFailure: false
+    }
+  ]
+}
+01:35:12.308 detox[95958] [90mi[39m [33mipc[39m dispatching event to  primary-95957 /tmp/detox.primary-95957  :  reportTestResults , {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/Users/sachingupta/CognisiveLabs/kin_keeper/e2e/GroupsFlow.test.ts',
+      testExecError: {
+        name: 'DetoxRuntimeError',
+        message: 'Failed to find a device by type = "iPhone 15 pro"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+        stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15 pro"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+          '    at SimulatorAllocDriver._queryDevices (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+          '    at async SimulatorAllocDriver._groupDevicesByStatus (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+          '    at async SimulatorAllocDriver._findOrCreateDevice (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+          '    at async safeAsync (/opt/homebrew/lib/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+          '    at async ExclusiveLockfile.exclusively (/opt/homebrew/lib/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+          '    at async SimulatorAllocDriver.allocate (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+      },
+      isPermanentFailure: false
+    },
+    {
+      success: false,
+      testFilePath: '/Users/sachingupta/CognisiveLabs/kin_keeper/e2e/features/GroupManagement.test.ts',
+      testExecError: {
+        name: 'DetoxRuntimeError',
+        message: 'Failed to find a device by type = "iPhone 15 pro"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+        stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15 pro"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+          '    at SimulatorAllocDriver._queryDevices (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+          '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+          '    at async SimulatorAllocDriver._groupDevicesByStatus (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+          '    at async SimulatorAllocDriver._findOrCreateDevice (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+          '    at async safeAsync (/opt/homebrew/lib/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+          '    at async ExclusiveLockfile.exclusively (/opt/homebrew/lib/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+          '    at async SimulatorAllocDriver.allocate (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+      },
+      isPermanentFailure: false
+    }
+  ]
+}
+01:35:12.309 detox[95957] [90mi[39m [33mipc[39m dispatching event to socket  :  reportTestResultsDone {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/Users/sachingupta/CognisiveLabs/kin_keeper/e2e/GroupsFlow.test.ts',
+      testExecError: {
+        name: 'DetoxRuntimeError',
+        message: 'Failed to find a device by type = "iPhone 15 pro"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+        stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15 pro"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+          '    at SimulatorAllocDriver._queryDevices (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+          '    at async SimulatorAllocDriver._groupDevicesByStatus (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+          '    at async SimulatorAllocDriver._findOrCreateDevice (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+          '    at async safeAsync (/opt/homebrew/lib/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+          '    at async ExclusiveLockfile.exclusively (/opt/homebrew/lib/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+          '    at async SimulatorAllocDriver.allocate (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+      },
+      isPermanentFailure: false
+    },
+    {
+      success: false,
+      testFilePath: '/Users/sachingupta/CognisiveLabs/kin_keeper/e2e/features/GroupManagement.test.ts',
+      testExecError: {
+        name: 'DetoxRuntimeError',
+        message: 'Failed to find a device by type = "iPhone 15 pro"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+        stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15 pro"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+          '    at SimulatorAllocDriver._queryDevices (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+          '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+          '    at async SimulatorAllocDriver._groupDevicesByStatus (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+          '    at async SimulatorAllocDriver._findOrCreateDevice (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+          '    at async safeAsync (/opt/homebrew/lib/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+          '    at async ExclusiveLockfile.exclusively (/opt/homebrew/lib/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+          '    at async SimulatorAllocDriver.allocate (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+      },
+      isPermanentFailure: false
+    }
+  ]
+}
+01:35:12.309 detox[95957] [90mi[39m [33mipc[39m broadcasting event to all known sockets listening to  /tmp/detox.primary-95957  :   sessionStateUpdate {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/Users/sachingupta/CognisiveLabs/kin_keeper/e2e/GroupsFlow.test.ts',
+      testExecError: {
+        name: 'DetoxRuntimeError',
+        message: 'Failed to find a device by type = "iPhone 15 pro"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+        stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15 pro"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+          '    at SimulatorAllocDriver._queryDevices (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+          '    at async SimulatorAllocDriver._groupDevicesByStatus (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+          '    at async SimulatorAllocDriver._findOrCreateDevice (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+          '    at async safeAsync (/opt/homebrew/lib/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+          '    at async ExclusiveLockfile.exclusively (/opt/homebrew/lib/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+          '    at async SimulatorAllocDriver.allocate (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+      },
+      isPermanentFailure: false
+    },
+    {
+      success: false,
+      testFilePath: '/Users/sachingupta/CognisiveLabs/kin_keeper/e2e/features/GroupManagement.test.ts',
+      testExecError: {
+        name: 'DetoxRuntimeError',
+        message: 'Failed to find a device by type = "iPhone 15 pro"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+        stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15 pro"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+          '    at SimulatorAllocDriver._queryDevices (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+          '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+          '    at async SimulatorAllocDriver._groupDevicesByStatus (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+          '    at async SimulatorAllocDriver._findOrCreateDevice (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+          '    at async safeAsync (/opt/homebrew/lib/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+          '    at async ExclusiveLockfile.exclusively (/opt/homebrew/lib/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+          '    at async SimulatorAllocDriver.allocate (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+      },
+      isPermanentFailure: false
+    }
+  ]
+}
+01:35:12.309 detox[95958] [90mi[39m [33mipc[39m ## received events ##
+01:35:12.309 detox[95958] [90mi[39m [33mipc[39m detected event reportTestResultsDone {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/Users/sachingupta/CognisiveLabs/kin_keeper/e2e/GroupsFlow.test.ts',
+      testExecError: {
+        name: 'DetoxRuntimeError',
+        message: 'Failed to find a device by type = "iPhone 15 pro"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+        stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15 pro"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+          '    at SimulatorAllocDriver._queryDevices (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+          '    at async SimulatorAllocDriver._groupDevicesByStatus (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+          '    at async SimulatorAllocDriver._findOrCreateDevice (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+          '    at async safeAsync (/opt/homebrew/lib/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+          '    at async ExclusiveLockfile.exclusively (/opt/homebrew/lib/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+          '    at async SimulatorAllocDriver.allocate (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+      },
+      isPermanentFailure: false
+    },
+    {
+      success: false,
+      testFilePath: '/Users/sachingupta/CognisiveLabs/kin_keeper/e2e/features/GroupManagement.test.ts',
+      testExecError: {
+        name: 'DetoxRuntimeError',
+        message: 'Failed to find a device by type = "iPhone 15 pro"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+        stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone 15 pro"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+          '    at SimulatorAllocDriver._queryDevices (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:177:13)\n' +
+          '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+          '    at async SimulatorAllocDriver._groupDevicesByStatus (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:150:27)\n' +
+          '    at async SimulatorAllocDriver._findOrCreateDevice (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:119:29)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:43:14\n' +
+          '    at async safeAsync (/opt/homebrew/lib/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceRegistry.js:62:24\n' +
+          '    at async ExclusiveLockfile.exclusively (/opt/homebrew/lib/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+          '    at async SimulatorAllocDriver.allocate (/opt/homebrew/lib/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:42:18)\n' +
+          '    at async /opt/homebrew/lib/node_modules/detox/src/devices/allocation/DeviceAllocator.js:44:22'
+      },
+      isPermanentFailure: false
+    }
+  ]
+}
+01:35:12.312 detox[95957] [90mi[39m [33mipc[39m socket disconnected secondary-95958
+01:35:12.312 detox[95958] [90mi[39m [33mipc[39m connection closed primary-95957 /tmp/detox.primary-95957 0 tries remaining of 0
+01:35:12.312 detox[95958] [90mi[39m [33mipc[39m secondary-95958 exceeded connection rety amount of  or stopRetrying flag set.
+01:35:12.414 detox[95957] [90mE[39m [33mlifecycle[39m Command failed with exit code = 1:
+jest --config e2e/jest.config.js
+01:35:12.414 detox[95957] [90mB[39m [33mdevice[39m cleanup
+  args: ()
+01:35:12.415 detox[95957] [90mE[39m [33mdevice[39m cleanup
+01:35:12.416 detox[95957] [90mi[39m [33mws-server[39m Detox server has been closed gracefully
+01:35:12.417 detox[95957] [90mE[39m [33mlifecycle[39m ../../../../opt/homebrew/bin/detox test --configuration ios.sim.debug --loglevel trace
